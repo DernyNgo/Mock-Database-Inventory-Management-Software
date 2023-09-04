@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Controllers.ReportsPostalCode">
+    <children>
+        <Label layoutX="27.0" layoutY="50.0" text="Reports View">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="27.0" layoutY="88.0" mnemonicParsing="false" onAction="#appointmentViewAction" text="Return to Appointment Scheduler" />
+        <ComboBox fx:id="reportsComboBox" layoutX="793.0" layoutY="247.0" onAction="#reportsComboBoxAction" prefHeight="26.0" prefWidth="112.0" />
+        <Label fx:id="selectAContactLabel" layoutX="662.0" layoutY="251.0" text="Select a Postal Code" />
+        <Button fx:id="contactButton" layoutX="27.0" layoutY="130.0" mnemonicParsing="false" onAction="#contactButtonAction" text="Total Customer Appointments by Contact" />
+        <Button fx:id="customerTypeButton" layoutX="27.0" layoutY="170.0" mnemonicParsing="false" onAction="#customerTypeButtonAction" text="Total Customer Appointments by Type" />
+        <Button fx:id="customerMonthButton" layoutX="27.0" layoutY="210.0" mnemonicParsing="false" onAction="#customerMonthButtonAction" text="Total Customer Appointments by Month" />
+        <Button fx:id="customerPostalCode" layoutX="27.0" layoutY="250.0" mnemonicParsing="false" onAction="#customerPostalCodeButton" text="Total Customers by Postal Code" />
+      <Label fx:id="reportsTotalCounter" layoutX="662.0" layoutY="215.0" text="Total Appointments:" />
+      <TableView fx:id="reportsTableView" layoutX="46.0" layoutY="300.0" prefHeight="275.0" prefWidth="859.0">
+         <columns>
+            <TableColumn fx:id="customerIDTextField" prefWidth="93.0" text="Customer ID" />
+            <TableColumn fx:id="customerNameTextField" prefWidth="162.0" text="Name" />
+            <TableColumn fx:id="customerAddressTextField" prefWidth="204.0" text="Address" />
+            <TableColumn fx:id="customerStateProvinceText" prefWidth="144.0" text="State / Province" />
+            <TableColumn fx:id="customerZipTextField" prefWidth="110.0" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneTextField" prefWidth="145.0" text="Phone Number" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>

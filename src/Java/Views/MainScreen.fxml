@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Controllers.MainScreen">
+   <children>
+      <TableView fx:id="appointmentTableView" layoutX="27.0" layoutY="135.0" prefHeight="318.0" prefWidth="893.0">
+        <columns>
+          <TableColumn fx:id="appointmentIDColumn" prefWidth="95.0" text="Appointment ID" />
+          <TableColumn fx:id="appointmentTitleColumn" prefWidth="65.0" text="Title" />
+            <TableColumn fx:id="appointmentDescColumn" prefWidth="82.0" text="Description" />
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="appointmentContactColumn" prefWidth="88.0" text="Contact" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="appointmentStartColumn" prefWidth="126.0" text="Start Date &amp; Time" />
+            <TableColumn fx:id="appointmentEndColumn" prefWidth="128.0" text="End Date &amp; Time" />
+            <TableColumn fx:id="appointmentCustomerIDColumn" minWidth="0.0" prefWidth="82.0" text="Customer ID" />
+            <TableColumn fx:id="appointmentUserIDColumn" prefWidth="72.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="51.0" text="Appointment Scheduler">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="859.0" layoutY="542.0" mnemonicParsing="false" onAction="#logOutAction" text="Log Out" />
+      <Button layoutX="202.0" layoutY="474.0" mnemonicParsing="false" onAction="#addAppointmentAction" text="Add Appointment" />
+      <Button layoutX="408.0" layoutY="474.0" mnemonicParsing="false" onAction="#updateAppointmentAction" text="Update Appointment" />
+      <Button layoutX="629.0" layoutY="474.0" mnemonicParsing="false" onAction="#deleteAppointmentAction" text="Delete Appointment" />
+      <RadioButton fx:id="viewWeekRadioButton" layoutX="726.0" layoutY="92.0" mnemonicParsing="false" onAction="#viewWeekAction" text="Week View">
+         <toggleGroup>
+            <ToggleGroup fx:id="viewToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="viewMonthRadioButton" layoutX="832.0" layoutY="92.0" mnemonicParsing="false" onAction="#viewMonthAction" text="Month View" toggleGroup="$viewToggleGroup" />
+      <RadioButton fx:id="viewAllRadioButton" layoutX="638.0" layoutY="92.0" mnemonicParsing="false" onAction="#viewAllAction" selected="true" text="View All" toggleGroup="$viewToggleGroup" />
+      <Button layoutX="27.0" layoutY="88.0" mnemonicParsing="false" onAction="#customerViewAction" text="Customer View" />
+      <Button layoutX="171.0" layoutY="88.0" mnemonicParsing="false" onAction="#reportsViewAction" text="Reports" />
+      <DatePicker fx:id="apptDatePicker" layoutX="420.0" layoutY="88.0" onAction="#apptDatePickerAction" />
+   </children>
+</AnchorPane>

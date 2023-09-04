@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.Controllers.Reports">
+   <children>
+      <TableView fx:id="reportsTableView" layoutX="108.0" layoutY="300.0" prefHeight="279.0" prefWidth="734.0">
+         <columns>
+            <TableColumn fx:id="appointmentIDColumn" prefWidth="95.0" text="Appointment ID" />
+            <TableColumn fx:id="appointmentTitleColumn" prefWidth="65.0" text="Title" />
+            <TableColumn fx:id="appointmentDescColumn" prefWidth="82.0" text="Description" />
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="appointmentStartColumn" prefWidth="126.0" text="Start Date &amp; Time" />
+            <TableColumn fx:id="appointmentEndColumn" prefWidth="128.0" text="End Date &amp; Time" />
+            <TableColumn fx:id="appointmentCustomerIDColumn" minWidth="0.0" prefWidth="82.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="50.0" text="Reports View">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="27.0" layoutY="88.0" mnemonicParsing="false" onAction="#appointmentViewAction" text="Return to Appointment Scheduler" />
+      <ComboBox fx:id="reportsComboBox" layoutX="770.0" layoutY="246.0" onAction="#reportsComboBoxAction" prefWidth="150.0" />
+      <Label layoutX="662.0" layoutY="251.0" text="Select a Contact" />
+      <Button layoutX="27.0" layoutY="130.0" mnemonicParsing="false" onAction="#contactButtonAction" text="Total Customer Appointments by Contact" />
+      <Button layoutX="27.0" layoutY="170.0" mnemonicParsing="false" onAction="#customerTypeButtonAction" text="Total Customer Appointments by Type" />
+      <Button layoutX="27.0" layoutY="210.0" mnemonicParsing="false" onAction="#customerMonthButtonAction" text="Total Customer Appointments by Month" />
+      <Button fx:id="customerPostalCode" layoutX="27.0" layoutY="250.0" mnemonicParsing="false" onAction="#customerPostalCodeButton" text="Total Customers by Postal Code" />
+      <Label fx:id="reportsTotalCounter" layoutX="662.0" layoutY="215.0" text="Total Appointments:" />
+   </children>
+</AnchorPane>
